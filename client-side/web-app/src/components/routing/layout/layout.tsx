@@ -6,6 +6,9 @@ import { Helmet } from 'react-helmet';
 import { throwError } from 'src/logic/app-internals/utils/throw-error';
 import { Header } from './header/header';
 import { GQLLayoutQuery } from './layout._graphql-generated_';
+import { Sidebar } from './sidebar/sidebar';
+import { Col, Container, Row } from 'react-bootstrap';
+import { Footer } from './footer/footer';
 
 type Props = {
   children: () => ReactNode;
@@ -38,14 +41,29 @@ export function Layout(props: Props) {
       </Helmet>
       <div className="min-vh-100 d-flex flex-column align-items-stretch">
         <Header menuHtmlId="page-header-menu" className="sticky-top" />
-        <main
-          className={`flex-fill ${props.noContainment ? '' : 'container'} ${
-            props.noTopPadding ? '' : 'pt-3'
-          } ${props.noBottomPadding ? '' : 'pb-3'}`}
-        >
-          {props.children()}
-        </main>
-        {/* TODO: Footer goes here */}
+        <Container fluid>
+          <Row>
+            <Col sm={1} md={2}>
+              <Sidebar
+                menuHtmlId="page-sidebar"
+                className="flex-column bg-primary"
+              />
+            </Col>
+            <Col>
+              <main
+                className={`flex-fill ${
+                  props.noContainment ? '' : 'container'
+                } ${props.noTopPadding ? '' : 'pt-3'} ${
+                  props.noBottomPadding ? '' : 'pb-3'
+                }`}
+              >
+                {props.children()}
+              </main>
+            </Col>
+          </Row>
+        </Container>
+
+        <Footer />
       </div>
     </>
   );

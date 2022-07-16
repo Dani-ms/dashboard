@@ -5,10 +5,10 @@ import { Col, Container, Row } from 'react-bootstrap';
 export function FeaturedInfo() {
   return (
     <>
-      <Container className="featured">
+      <Container className="featured pt-5 mx-auto">
         <div className="featuredItem">
           <Row>
-            <Col xs={6} md={4}>
+            <Col sm={12} md={4}>
               <span className="featuredTitle"> Revenue</span>
               <div className="featuredMoneyContainer">
                 <span className="featuredMoney"> $2,415 </span>
@@ -22,7 +22,7 @@ export function FeaturedInfo() {
               </div>
             </Col>
 
-            <Col xs={6} md={4}>
+            <Col sm={12} md={4}>
               <span className="featuredTitle"> Sales</span>
               <div className="featuredMoneyContainer">
                 <span className="featuredMoney"> $2,415 </span>
@@ -32,7 +32,7 @@ export function FeaturedInfo() {
                 </span>
               </div>
             </Col>
-            <Col xs={6} md={4}>
+            <Col sm={12} md={4}>
               <span className="featuredTitle"> Cost</span>
               <div className="featuredMoneyContainer">
                 <span className="featuredMoney"> $2,415 </span>

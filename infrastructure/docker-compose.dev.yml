@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-  postgres_estirador:
+  postgres_dashboard:
     build:
       context: postgres
       dockerfile: ./Dockerfile
@@ -11,7 +11,7 @@ services:
       - POSTGRES_PASSWORD=postgres
     ports:
       - 5432:5432
-  postgres_test_estirador:
+  postgres_test_dashboard:
     build:
       context: postgres
       dockerfile: ./Dockerfile

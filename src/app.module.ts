@@ -5,12 +5,14 @@ import { LoggingServiceSingleton } from './internals/logging/logging.service.sin
 import { DEFAULT_DB_TYPEORM_CONN_OPTS } from './internals/databases/default-db-typeorm-conn-opts';
 import { AuthModule } from './auth/auth.module';
 import { TypeormConnectionsModule } from './internals/databases/typeorm.module';
+import { DataModule } from './data/data.module';
 
 @Module({
   imports: [
     LoggingModule.forRoot(() => LoggingServiceSingleton.getInstance()),
     TypeormConnectionsModule.forRoot([DEFAULT_DB_TYPEORM_CONN_OPTS]),
     AuthModule,
+    DataModule,
   ],
   providers: [...CROSS_CUTTING_PROVIDERS],
 })

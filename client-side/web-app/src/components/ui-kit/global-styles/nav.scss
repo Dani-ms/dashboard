@@ -5,8 +5,8 @@
 
 .nav-link {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: $spacer;
+  font-weight: bold;
 
   &:not(a[href]):not(.disabled) {
     color: $link-color;

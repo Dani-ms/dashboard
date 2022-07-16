@@ -68,14 +68,7 @@ export function Header(props: Props) {
                 <span className="h5">{PROJECT_NAME}</span>
               </span>
             </LinkAnchor>
-            <LinkAnchor
-              className="navbar-brand me-0 me-lg-3"
-              href={INDEX_ROUTE.getHref()}
-            >
-              <span className="">
-                <span className="h5">Calendar</span>
-              </span>
-            </LinkAnchor>
+
             <Navbar.Collapse id={props.menuHtmlId}>
               <Nav></Nav>
             </Navbar.Collapse>
