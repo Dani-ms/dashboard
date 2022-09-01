@@ -5,11 +5,15 @@ import { Col, Container, Row } from 'react-bootstrap';
 export function FeaturedInfo() {
   return (
     <>
-      <Container className="featured pt-5 mx-auto">
+      <Container className="featured pt-5 mx-auto text-center">
         <div className="featuredItem">
           <Row>
-            <Col sm={12} md={4}>
-              <span className="featuredTitle"> Revenue</span>
+            <Col
+              sm={12}
+              md={3}
+              className="card bg-tertiary shadow-sm py-3 text-center me-2"
+            >
+              <h3> Revenue</h3>
               <div className="featuredMoneyContainer">
                 <span className="featuredMoney"> $2,415 </span>
                 <span className="featuredMoneyRate">
@@ -22,8 +26,12 @@ export function FeaturedInfo() {
               </div>
             </Col>
 
-            <Col sm={12} md={4}>
-              <span className="featuredTitle"> Sales</span>
+            <Col
+              sm={12}
+              md={3}
+              className="card bg-secondary shadow-sm py-3 text-center me-2"
+            >
+              <h3> Sales</h3>
               <div className="featuredMoneyContainer">
                 <span className="featuredMoney"> $2,415 </span>
                 <span className="featuredMoneyRate">
@@ -32,8 +40,12 @@ export function FeaturedInfo() {
                 </span>
               </div>
             </Col>
-            <Col sm={12} md={4}>
-              <span className="featuredTitle"> Cost</span>
+            <Col
+              sm={12}
+              md={3}
+              className="card bg-primary shadow-sm py-3 text-center "
+            >
+              <h2> Cost</h2>
               <div className="featuredMoneyContainer">
                 <span className="featuredMoney"> $2,415 </span>
                 <span className="featuredMoneyRate">

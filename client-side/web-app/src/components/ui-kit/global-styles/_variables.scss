@@ -1,7 +1,8 @@
 @import 'src/components/ui-kit/global-styles/additional-functions/color-info-functions';
 
 $primary: #cc4673;
-$secondary: #74a099;
+$secondary: #344e41;
+$tertiary: #f6bd60;
 $success: #28a745;
 $info: #007bff;
 $warning: #ffc107;
@@ -32,6 +33,7 @@ $theme-colors: (
   'default': $default,
   'primary': $primary,
   'secondary': $secondary,
+  'tertiary': $tertiary,
   'success': $success,
   'info': $info,
   'warning': $warning,
@@ -46,6 +48,7 @@ $inverted-theme-colors: (
   'default': $default-inverted,
   'primary': $primary,
   'secondary': $secondary,
+  'tertiary': $tertiary,
   'success': $success,
   'info': $info,
   'warning': $warning,
@@ -121,6 +124,7 @@ $dark-contrasting-colors: (
   'default': $dark,
   'primary': $primary,
   'secondary': $secondary,
+  'tertiary': $tertiary,
   'success': $success,
   'info': $info,
   'warning': $warning,
@@ -145,6 +149,7 @@ $light-contrasting-colors: (
   'default': $light,
   'primary': change-color($primary, $lightness: 70%),
   'secondary': change-color($secondary, $lightness: 70%),
+  'tertiary': change-color($tertiary, $lightness: 70%),
   'success': change-color($success, $lightness: 70%),
   'info': change-color($info, $lightness: 70%),
   'warning': change-color($warning, $lightness: 70%),

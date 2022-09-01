@@ -40,13 +40,12 @@ export function Layout(props: Props) {
         <title>{title}</title>
       </Helmet>
       <div className="min-vh-100 d-flex flex-column align-items-stretch">
-        <Header menuHtmlId="page-header-menu" className="sticky-top" />
         <Container fluid>
           <Row>
             <Col sm={1} md={2}>
-              <Sidebar
-                menuHtmlId="page-sidebar"
-                className="flex-column bg-primary"
+              <Header
+                menuHtmlId="page-header-menu"
+                className="sticky-top flex-column bg-secondary h-100"
               />
             </Col>
             <Col>

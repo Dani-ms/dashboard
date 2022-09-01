@@ -79,7 +79,8 @@ export function Chart(props: Props) {
                 {({ data }) => {
                   return (
                     <BarChart
-                      width={550}
+                      className="chat-size"
+                      width={500}
                       height={500}
                       data={data}
                       margin={{

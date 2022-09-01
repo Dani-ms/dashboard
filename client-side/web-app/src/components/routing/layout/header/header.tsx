@@ -8,6 +8,13 @@ import { PROJECT_NAME } from '@app/shared/project-details';
 import { missingCssClass } from 'src/components/ui-kit/core/utils/missing-css-class';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faChalkboardTeacher,
+  faChartSimple,
+  faFile,
+  faGear,
+  faToolbox,
+} from '@fortawesome/free-solid-svg-icons';
 
 type Props = {
   menuHtmlId: string;
@@ -46,8 +53,21 @@ export function Header(props: Props) {
   return (
     <>
       <header className={`border-bottom ${props.className}`}>
-        <Navbar collapseOnSelect expand="lg" expanded={expanded}>
-          <div className="container">
+        <div className="container py-5 px-3 mx-auto">
+          <div className="d-none d-lg-block">
+            <LinkAnchor className="px-2 mx-auto " href={INDEX_ROUTE.getHref()}>
+              <span className="badge bg-primary ">
+                <span className="h5">{PROJECT_NAME}</span>
+              </span>
+            </LinkAnchor>
+          </div>
+
+          <Navbar
+            bg="secondary"
+            collapseOnSelect
+            expand="lg"
+            expanded={expanded}
+          >
             <Navbar.Toggle
               onClick={() => {
                 if (expanded) {
@@ -59,21 +79,58 @@ export function Header(props: Props) {
               aria-controls={props.menuHtmlId}
             >
               <FontAwesomeIcon icon={faBars} />
+              <LinkAnchor className="px-2 mx-auto" href={INDEX_ROUTE.getHref()}>
+                <span className="badge bg-primary ">
+                  <span className="h5">{PROJECT_NAME}</span>
+                </span>
+              </LinkAnchor>
             </Navbar.Toggle>
-            <LinkAnchor
-              className="navbar-brand me-0 me-lg-3"
-              href={INDEX_ROUTE.getHref()}
-            >
-              <span className="badge bg-primary">
-                <span className="h5">{PROJECT_NAME}</span>
-              </span>
-            </LinkAnchor>
 
             <Navbar.Collapse id={props.menuHtmlId}>
-              <Nav></Nav>
+              <div className="container bg-secondary px-3">
+                <Nav className="flex-column">
+                  <Nav.Item>
+                    <Nav.Link href="ABOUT_ROUTE.getHref()">
+                      {' '}
+                      <FontAwesomeIcon
+                        icon={faChalkboardTeacher}
+                        className="py-1 pe-2"
+                      />{' '}
+                      Overview
+                    </Nav.Link>
+                    <Nav.Link eventKey="link-1">
+                      {' '}
+                      <FontAwesomeIcon
+                        icon={faChartSimple}
+                        className="py-1 pe-2"
+                      />{' '}
+                      Growth
+                    </Nav.Link>
+
+                    <Nav.Link eventKey="link-2">
+                      <FontAwesomeIcon icon={faToolbox} className="py-1 pe-2" />
+                      Customers
+                    </Nav.Link>
+                    <Nav.Link eventKey="link-3">
+                      <FontAwesomeIcon icon={faFile} className="py-1 pe-2" />
+                      Reports
+                    </Nav.Link>
+                    <Nav.Link eventKey="link-4">
+                      <FontAwesomeIcon icon={faGear} className="py-1 pe-2" />
+                      Customers
+                    </Nav.Link>
+
+                    <Nav.Link eventKey="link-5">
+                      {' '}
+                      <FontAwesomeIcon icon={faGear} className="py-1 pe-2" />
+                      Settings
+                    </Nav.Link>
+                  </Nav.Item>
+                </Nav>
+              </div>
             </Navbar.Collapse>
-          </div>
-        </Navbar>
+          </Navbar>
+        </div>
       </header>
       {expanded ? (
         <div
