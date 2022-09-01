@@ -6,7 +6,6 @@ import { Helmet } from 'react-helmet';
 import { throwError } from 'src/logic/app-internals/utils/throw-error';
 import { Header } from './header/header';
 import { GQLLayoutQuery } from './layout._graphql-generated_';
-import { Sidebar } from './sidebar/sidebar';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Footer } from './footer/footer';
 

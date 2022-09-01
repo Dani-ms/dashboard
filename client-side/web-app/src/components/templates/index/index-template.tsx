@@ -1,8 +1,8 @@
 import React from 'react';
-import { Chart } from 'src/components/root-frame/components/chart';
-import { FeaturedInfo } from 'src/components/root-frame/components/featuredInfo';
+import { Chart } from 'src/components/templates/index/components/chart';
 import { Layout } from 'src/components/routing/layout/layout';
 import { INDEX_ROUTE } from './index-routes';
+import { FeaturedInfo } from './components/featuredInfo';
 
 export const IndexTemplate = () => (
   <Layout title={INDEX_ROUTE.label}>
