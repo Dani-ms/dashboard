@@ -7,6 +7,9 @@ export class Data extends SimpleEntity {
   name!: string;
 
   @Column()
+  month!: number;
+
+  @Column()
   uv!: number;
 
   @Column()

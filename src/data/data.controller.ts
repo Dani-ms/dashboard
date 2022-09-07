@@ -11,6 +11,6 @@ export class DataController {
   getAllData() {
     const repository = this.connection.getCustomRepository(DataRepository);
 
-    return repository.dangerouslyFindAll({ order: { name: 'DESC' } });
+    return repository.dangerouslyFindAll({ order: { month: 'ASC' } });
   }
 }

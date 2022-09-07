@@ -47,6 +47,7 @@ async function seed() {
   await dataRepository.create(
     {
       name: 'Coisas',
+      month: 1,
       uv: 200,
       pv: 400,
       amt: 600,

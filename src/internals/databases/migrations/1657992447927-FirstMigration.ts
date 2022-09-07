@@ -17,6 +17,7 @@ export class FirstMigration1657992447927 implements MigrationInterface {
             CREATE TABLE "data" (
                 "id" uuid NOT NULL DEFAULT uuid_generate_v4(),
                 "name" character varying NOT NULL,
+                "month" integer NOT NULL,
                 "uv" integer NOT NULL,
                 "pv" integer NOT NULL,
                 "amt" integer NOT NULL,

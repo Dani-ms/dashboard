@@ -39,7 +39,7 @@ export function Layout(props: Props) {
         <title>{title}</title>
       </Helmet>
       <div className="min-vh-100 d-flex flex-column align-items-stretch">
-        <Container fluid>
+        <Container>
           <Row>
             <Col sm={1} md={2}>
               <Header
